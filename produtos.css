@@ -1,0 +1,143 @@
+ body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    }
+
+    header {
+  background: black;
+  color: #facc15;
+  padding: 25px 40px;
+  font-size: 26px;
+  font-weight: 900;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+    #ofer {
+    font-size: 24px;
+        font-weight: 700;
+        background: #facc15;
+        color: black;
+        padding: 8px 14px;
+        border-radius: 10px;
+        transition: 0.3s;
+        justify-content: center
+}   
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    select {
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 2px solid #e5e7eb;
+      font-weight: 600;
+      background: white;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+
+    #listaProdutos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .produto-card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+    }
+
+    .produto-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .produto-card h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #6b7280;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      border: 2px solid #e5e7eb;
+      font-weight: 600;
+    }
+
+    .profit {
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .lucro-positivo { color: #22c55e; }
+    .lucro-negativo { color: #ef4444; }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #facc15, #fbbf24);
+      color: black;
+    }
+
+    .btn-primary:hover { opacity: 0.9; }
+
+    .voltar {
+    font-size: 16px;
+     text-decoration: none;
+    background: linear-gradient(90deg, #facc15, #fbbf24);
+     color: black;
+     width: 120px;
+     border-radius: 6px;
+     padding: 10px;
+     text-align: center;
+}
+    .input-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.input-control button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 900;
+  cursor: pointer;
+  background: #facc15;
+}
+
+.input-control input {
+  flex: 1;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  padding: 6px;
+  font-weight: 700;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pague Menos - Gerador de Promoções</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="imgs/icon.png">
+</head>
+
+<body>
+
+<header class="main-header">
+ <img class="logo" src="imgs/logo.png" alt="PAGUE MENOS">
+  <a href="produtos.html" class="menu-link">Produtos</a>
+
+</header>
+
+<div class="container">
+
+  <div class="card no-print">
+    <h3>Cadastro de Produtos</h3>
+
+    <label>Nome do Produto</label>
+    <input type="text" id="name">
+
+    <label>Categoria</label>
+    <select id="category">
+      <option>Mercearia</option>
+      <option>Hortifruti</option>
+      <option>Carnes</option>
+      <option>Bebidas</option>
+      <option>Limpeza</option>
+      <option>Higiene</option>
+      <option>Padaria</option>
+      <option>Frios</option>
+    </select>
+
+    <label>Custo (R$)</label>
+    <input type="number" id="costPrice">
+
+    <label>Margem (%)</label>
+    <input type="number" id="margin" value="20">
+
+    <label>Venda (R$)</label>
+    <input type="number" id="salePrice">
+
+    <p><strong>Lucro:</strong> R$ <span id="profit">0.00</span></p>
+
+    <button class="btn-primary" onclick="addItem()">Adicionar à Promoção</button>
+  </div>
+
+  <div class="print-area">
+    <div class="print-header">
+      ENCARTE
+      <div style="font-size:14px;">EMITIDO EM: <span id="date"></span></div>
+    </div>
+
+    <div style="padding:20px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Setor</th>
+            <th>Preço</th>
+            <th class="no-print">Ação</th>
+          </tr>
+        </thead>
+        <tbody id="promoList"></tbody>
+      </table>
+
+      <div class="no-print" style="margin-top:20px;">
+        <button class="btn-black" onclick="window.print()">Salvar PDF</button>
+        <button onclick="clearList()">Limpar</button>
+      </div>
+
+      <p style="margin-top:20px;"><strong>Total de Itens:</strong> <span id="totalItems">0</span></p>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
